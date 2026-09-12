@@ -16,7 +16,7 @@ const taskSchema = new mongoose.Schema({
         enum: ['pending', 'in-progress', 'completed'],
         default: 'pending'
     },
-    dueData: {
+    dueDate: {
         type: Date,
         required: [true, 'Due date is required']
     },
@@ -26,4 +26,4 @@ const taskSchema = new mongoose.Schema({
     }
 );
 
-module.exports('Task', taskSchema);
+module.exports=mongoose.model('Task', taskSchema);
